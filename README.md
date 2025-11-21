@@ -38,6 +38,14 @@ Here’s a quick look at the CV homepage:
 
 ---
 
+## 📬 Contact
+- 📧 Email: [robert.terupo@gmail.com](mailto:robert.terupo@gmail.com)  
+- 🔗 LinkedIn: [linkedin.com/in/robert-terupo](https://linkedin.com/in/robert-terupo)  
+- 💻 GitHub: [github.com/robertterupo-png](https://github.com/robertterupo-png)  
+- 🌐 Website: [robertterupo-png.github.io/robertterupo-website](https://robertterupo-png.github.io/robertterupo-website)
+
+---
+
 ## 🛠️ Features
 - Fixed navigation bar for quick section jumps  
 - Smooth scrolling and active section highlighting  
