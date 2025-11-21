@@ -1,11 +1,34 @@
-// assets/script.js
-document.querySelectorAll('.nav a').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    const el = document.querySelector(id);
-    if (el) {
+// Smooth scroll for navbar links
+document.querySelectorAll('.navbar a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    // Only handle internal anchors (#section)
+    if (this.getAttribute('href').startsWith('#')) {
       e.preventDefault();
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Section highlighting
+const sections = document.querySelectorAll('section, header, footer');
+const navLinks = document.querySelectorAll('.navbar a');
+
+window.addEventListener('scroll', () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 60; // offset for navbar
+    const sectionHeight = section.offsetHeight;
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
     }
   });
 });
